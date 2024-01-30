@@ -1,0 +1,14 @@
+﻿@page "/tablebuttons"
+@inject HttpClient Http
+
+<PageTitle>TableButtons</PageTitle>
+
+<h1>A table full of buttons</h1>
+
+<div class="grid">
+    @foreach (var forecast in _buttonNames)
+    {
+        <button class="button">@forecast.Name</button>
+    }
+    <button class="button" @onclick="IncrementCount">Button 1</button>
+</div>
